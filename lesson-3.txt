@@ -1,0 +1,36 @@
+1. Giải thích các câu lệnh: git commit --amend, git commit --amend
+-m”<message>”, git restore --staged <file>, git reset HEAD~1.
+Git commit --amend : edit commit message từ commit gần nhất qua terminal manually
+Git commit --amend  -m "<mesgae edit>" : tự động ghi đè với một message mới cho commit gần nhất
+Git restore --staged <filename> : đưa 1 file từ vùng staging trở về working directory
+Git reset Head~1 : đưa file từ vùng repo trở về working directory
+2.
+Hãy tưởng tượng có 1 folder lesson-3 mới được tạo. Hãy liệt kê các file theo từng
+vùng, liệt kê các commit và message tương ứng sau khi thao tác một loạt các lệnh sau
+(sẽ rất tuyệt vời nếu bạn không chạy trên máy tính thật, mà bạn chạy trong đầu, sẽ giúp
+bạn hiểu về Git rõ ràng hơn):
+Trình bày theo format :
+a: Tạo 3 file
+- Local: file1, file2, file3 : 
+- Working directory: 
+- Staging: 
+- Repository:
+a. Tạo 3 file: file1, file2, file3
+b. Chạy lệnh: git init : khởi tạo project , các filé từ local được quản lý bởi git và được đưa vào vùng working directory
+c. Chạy lệnh: git commit -m”init project”  commit message đầu tiên sau khi khởi tạo projecy
+d. Chạy lệnh: git add file1 : đưa file 1 vào vùng staging
+e. Chạy lệnh: git commit -m”add file1” : đưa file 1 vào vùng repository
+f. Chạy lệnh: git add . : đưa tất cả các file chưa được add còn lại vào vùng staging
+g. Chạy lệnh: git restore --staged file2 : đưa file 2 từ staging trở về working directory
+h. Chạy lệnh: git commit -m”add all files” : đưa file 3 từ staging vào vùng repository.
+i. Chạy lệnh: git reset HEAD~1 : đưa file 3 từ vùng repository về working directory.
+
+3. Hãy tưởng tượng có 1 folder lesson-3-git mới được tạo ra. Hãy liệt kê các file theo
+từng vùng sau khi thao tác các lệnh sau:
+a. Chạy lệnh git init : khởi tạo project, đưa các files có sẵn ở local vào working directory để quản lý bỏi Git
+b. Tạo file file1.txt, file2.txt, oops/file3.txt. : tạo ở local
+c. Thêm file .gitignore, thêm vào 2 dòng: 2 file file1.txt và oops/file3.txt vẫn được giữ ở local và không được quản lý bởi git
+i. file1.txt
+ii. oops/
+d. Chạy lệnh: git add . : add file 2.txt vào staging
+e. Chạy lệnh: git commit -m"init project" : đưa file 2 từ staging vào vùng repository với messge "init project"
